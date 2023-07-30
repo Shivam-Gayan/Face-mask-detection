@@ -73,8 +73,8 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
 	return (locs, preds)
 
 # load our serialized face detector model from disk
-prototxtPath = r"C:\Users\shiva\OneDrive\Desktop\Risk Mitigation\FaCeMaskDetection-main\FaCeMaskDetection-main\face_detector\deploy.prototxt"
-weightsPath = r"C:\Users\shiva\OneDrive\Desktop\Risk Mitigation\FaCeMaskDetection-main\FaCeMaskDetection-main\face_detector\res10_300x300_ssd_iter_140000.caffemodel"
+prototxtPath = r"\deploy.prototxt"
+weightsPath = r"\res10_300x300_ssd_iter_140000.caffemodel"
 faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
 # load the face mask detector model from disk
