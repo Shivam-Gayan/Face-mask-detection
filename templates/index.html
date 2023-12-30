@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>Face-Mask</title>
+</head>
+<body>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div id="webcam" autoplay playsinline style="display:block;"> 
+        <img id="video" src="{{ url_for('video_feed') }}" width="400" />
+    </div>
+</body>
+</html>
