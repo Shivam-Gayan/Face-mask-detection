@@ -8,8 +8,8 @@ from keras.preprocessing.image import img_to_array
 from keras.models import load_model
 
 app = Flask(__name__)
-faceNet = cv2.dnn.readNet("E:/Projects/Face-mask-detection/deploy.prototxt", "E:/Projects/Face-mask-detection/res10_300x300_ssd_iter_140000.caffemodel")
-maskNet = load_model("E:/Projects/Face-mask-detection/mask_detector.model")
+faceNet = cv2.dnn.readNet("E:/Projects/Face-mask-detection/deploy.prototxt", "./res10_300x300_ssd_iter_140000.caffemodel")
+maskNet = load_model("./mask_detector.model")
 
 def detect_and_predict_mask(frame, faceNet, maskNet):
 	# grab the dimensions of the frame and then construct a blob
